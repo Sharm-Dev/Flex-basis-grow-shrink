@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">One</div>
+        <div class="child">Two</div>
+        <div class="child">Three</div>
+        <div class="child">Four</div>
+    </div>
+    <p class="text-one">Flex Grow - child classname<br/><br />
+        The parent element was 800px
+        <br />
+        Each child element was flex-basis 100px wide
+        <br />
+        This left the parent element a remainer of 400px not in use by the child elements
+        <br />
+        Then added a flex-grow of 1 which added to the child classname, this divided the extra 400px in the parent element, and added it equally to each child element
+        <br/>  
+        This then made all the child elements fill the parent container</p>
+    <p class="text-two">Flex Grow - child element 4 only<br /><br />
+        The parent element was 800px
+        <br />
+        Each child element was flex-basis 100px wide
+        <br />
+        This left the parent element a remainer of 400px not in use by the child elements
+        <br />
+        Then added a flex-grow of 1 to child element 4, which then added the extra 400px in the parent element to
+        child element 4 only. 
+        <br />
+        Which will make child element 4, 500px wide and all the other child elements will remain at 100px
+    </p>
+    <p class="text-three">
+        Flex Grow - child element 3  and 4 only<br /><br/>
+        The parent element was 800px
+        <br />
+        Each child element was flex-basis 100px wide
+        <br />
+        This left the parent element a remainer of 400px not in use by the child elements
+        <br />
+        Then added a flex-grow of 1 to child element 4 and flex-grow 2 to child 3
+        <br/> 
+        This will give 3 parts of the parent 400px to child element 3
+        <br/>
+        400/3=133 Parent element divived by three parts 
+        <br />
+        133x2=266 Then from above the 133 times the the flex-grow which is 2 for child element 3
+        <br/> 
+        266+100 The 266 from above added to the 100px in child element 3, gives the child element 3 a grand pixel amount of 366px 
+        <br/> 
+        For child element 4 its grand pixel amount is about 233   
+    </p>
+    <p class="text-four">
+        All the child class names are gave a size of flex-basis 400px each, which in grand pixel total is 1600px
+        <br>
+        Which is bigger then the parent element of 800px
+        <br/> 
+        So css will share the 800px space in equal amounts between the 4 child elements
+        <br/>
+        <br/>
+        Flex Shrink
+        <br />
+        Then I added flex-shrink:2; to child element two, this will now reduce that element twice as much as the other elements
+        
+    </p>
+    
+</body>
+</html>
